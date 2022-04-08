@@ -1,13 +1,10 @@
 ---
-- name: using hostscop variable
+- name: install firewalld using
   hosts: all
   tasks:
-   - name: create user
-     user:
+   - name: install firewall
+     apt:
       name: "{{a}}"
-      password: "{{b}}"
-      uid: "{{c}}"
-      home: "{{d}}"
-      shell: "{{e}}"
-
+      state: "{{b}}"
+      update_cache: "{{c}}"
 ...
