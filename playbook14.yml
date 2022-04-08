@@ -14,4 +14,4 @@
      copy:
       src: /etc/passwd
       dest: /tmp
-      
+...
