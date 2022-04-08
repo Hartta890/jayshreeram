@@ -3,7 +3,7 @@
    hosts: all
    vars:
     - a: tomcat9
-    - b: present
+    - b: absent
     - c: no
    tasks: 
     - name: install/uninstall
