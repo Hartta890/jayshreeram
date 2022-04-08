@@ -2,15 +2,17 @@
 - name: implementing tag
   hosts: all
   tasks:
-   - name: tree
-     state: present
+   - name: install tree
+     apt:
+      name: tree
+      state: present
      tags: tree_installtion
    - name: creater user
      user:
       name: mani
       password: dillip
      tags: user_creation
-   - name: cdopy/etc/passwd file
+   - name: copy/etc/passwd file
      copy:
       src: /etc/passwd
       dest: /tmp
