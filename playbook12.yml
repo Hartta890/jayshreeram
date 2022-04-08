@@ -1,0 +1,20 @@
+---
+- name: create a user
+  hosts: all
+  tasks:
+   - name: create multple user
+     user:
+      name: "{{item.a}}"
+      password: "{{item.b}}"
+      home: "{{item.c}}"
+     with_item: 
+      - {a= rajesh,b= puja,c= /home/ubuntu/rajesh}
+      - {a= puja,b= rani,c= /home/puja}
+   - name: copy file in to user
+     copy:
+      src: "{{item.a}}"
+      dest: "{{item.b}}"
+     with_items:
+      - {a= /etc/passwd,b= /home/ubuntu/rajesh}
+      - {a= /etc/group,b= home/rani}
+...
