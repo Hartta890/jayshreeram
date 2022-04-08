@@ -17,4 +17,18 @@
         dest: /home/ubuntu
    - name: start jenkins
      shell: java -jar jenkins.war
-     
+- name: install tomcat9 and required s/war
+  host: server
+  tasks: 
+   - name: install tomcat9 and tomcat9-admin
+     apt:
+      name: "{{item.a}}"
+      state: present
+      update_cache: "{{item.b}}"
+     with_items:
+     - {a: tomcat9,b: yes}
+     - {a: tomcat9-admin,b: no}
+- name: copy tomcat-users.xml file
+  copy:
+   src: tomcat-user.xml
+   dest: /etc/tomcat9
