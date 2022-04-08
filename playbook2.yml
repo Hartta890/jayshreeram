@@ -9,7 +9,7 @@
       update_cache: yes
    - name: edit the index.thml file
      copy:
-      src: intelliqit
+      content: "intelliqit"
       dest: /var/www/html/index.html
    - name: restart apache
      service: 
