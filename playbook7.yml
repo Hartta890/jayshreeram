@@ -1,0 +1,13 @@
+---
+- name: using hostscop variable
+  hosts: all
+  tasks:
+   - name: create user
+     user:
+      name: "{{a}}"
+      password: "{{b}}"
+      uid: "{{c}}"
+      home: "{{d}}"
+      shell: "{{e}}"
+
+...
