@@ -11,7 +11,7 @@
      copy:
       src: tomcat-users.xml
       dest: /etc/tomcat9/
-   - name: change port of tomcat from 8080 to 9090
+   - name: change port of tomcat9 from 8080 to 9090
      replace:
       regexp: 8080
       replace: 9090
@@ -23,11 +23,11 @@
    - name: pause for 3 mins
      pause:
       minutes: 3
-   - name: check tomcat response on server1
+   - name: check tomcat9 response on server1
      uri:
       url: http://172.31.80.220:9090
       status_code: 200
-   - name: check tomcat response on server2
+   - name: check tomcat9 response on server2
      uri:
       url: http://172.31.87.212:9090
       status_code: 200
