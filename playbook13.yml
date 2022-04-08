@@ -1,6 +1,6 @@
 ---
 - name: install jenkins s/with_items
-  hosts: jenkins
+  hosts: jenkinsserver
   tasks:
    - name: required software
      apt:
@@ -8,7 +8,6 @@
       state: present
       update_cache: "{{item.b}}"
      with_items:
-      - {a= openjdk-8-jdk,b= yes}
-      - {a= git,b= no}
-      - {a= maven,b= no}
-...
+      - {a: openjdk-8-jdk,b: yes}
+      - {a: git,b: no}
+      - {a: maven,b: no}
