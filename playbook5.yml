@@ -1,16 +1,14 @@
 ---
-- name: create a users
-  hosts: all 
-  tasks: 
-   - name: user creation
-     user:
-      name: "{{a}}"
-      password: "{{b}}"
-      home: "{{c}}"
-   - name: create a file
-     file:
-      name: "{{d}}"
-      state: "{{e}}"
+ - name: create a users
+   hosts: all 
+   tasks: 
+    - name: user creation
+      user:
+       name: "{{a}}"
+       password: "{{b}}"
+       home: "{{c}}"
+    - name: create a file
+      file:
+       name: "{{d}}"
+       state: "{{e}}"
 ...
-
-ansible-playbook playook5.yml --extra-var "a=ram b=sita c=/home/ram d=/home/usha/dir1 e=directory" -b
