@@ -20,9 +20,9 @@
      service:
       name: tomcat9
       state: restarted
-   - name: pause for 1 mins
+   - name: pause for 3 mins
      pause:
-      minutes:1
+      minutes: 3
    - name: check tomcat response on server1
      uri:
       url: http://172.31.80.220:9090
