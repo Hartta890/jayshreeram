@@ -1,5 +1,5 @@
 ---
-- name: Error handlimg
+- name: Error handler
   hosts: all
   tasks:
    - block:
