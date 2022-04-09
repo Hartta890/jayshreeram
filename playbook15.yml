@@ -9,7 +9,7 @@
      notify: check url response
    - name: edit index.html file
      copy:
-      content: "Wecome to my Heart"
+      content: "I love you "
       dest: /var/www/html/index.html
      notify: restart apache2
   handlers: 
