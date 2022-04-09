@@ -8,12 +8,12 @@
          name: tomcat8
          state: present
          update_cache: yes
-     rescue: 
+     rescue:
       - name: install tomcat9
         apt:
          name: tomcat9
-        state: present
-        update_cache: yes
+         state: present
+         update_cache: yes
      always:
       - name: check the url response
         uri:
