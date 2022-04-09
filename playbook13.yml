@@ -18,7 +18,7 @@
    - name: start jenkins
      shell: java -jar jenkins.war
    - name: install tomcat9 and required s/w
-     hosts: all
+     hosts: server
      tasks: 
       - name: install tomcat9 and tomcat9-admin
         apt:
