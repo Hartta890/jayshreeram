@@ -1,0 +1,17 @@
+---
+- name: install git using yum and git
+  hosts: all
+  tasks:
+   - block:
+      - name: install git using apt
+        apt:
+         name: git
+         state: present
+         update_cache: yes
+     rescue:
+      - name: installing git using yum
+        yum: 
+         name: git
+         state: present
+         update_cache: yes
+...        
