@@ -11,8 +11,8 @@
      copy:
       content: "Wecome to my Heart"
       dest: /var/www/html/index.html
-      notify: restart apache2
-     handlers: 
+     notify: restart apache2
+  handlers: 
    - name: restart apache2
      service:
       name: apache2
