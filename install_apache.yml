@@ -1,0 +1,8 @@
+---
+- name: install apache2
+  apt:
+   name: rasmi
+   state: present
+   update_cache: yes
+
+...

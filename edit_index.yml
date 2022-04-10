@@ -1,0 +1,6 @@
+---
+- name: edit index.html
+  copy:
+   content: "india"
+   dest: /var/www/html/index.html
+...
